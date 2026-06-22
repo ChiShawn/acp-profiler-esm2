@@ -21,18 +21,17 @@ Lower predicted IC50 corresponds to stronger predicted activity.
 - Peptide-domain ESM2 mean embedding
 - Peptide physicochemical descriptors and metadata
 - Assay and cell-line categorical/numeric context
-- Experimental context features curated from the activity records
 
 ## Model Architecture
 
 - Protein language model peptide representation
 - Peptide descriptor branch
-- Experimental context branch
+- Assay/context branch
 - Neural fusion and regression head
 
 ## Performance Summary
 
-Standard-time source-row test set, N = 155:
+Held-out IC50 test set, N = 155:
 
 | Method | RMSE | MAE | R2 | PCC |
 |---|---:|---:|---:|---:|
@@ -51,8 +50,7 @@ Shared held-out IC50 subset for public xDeep-AcPEP comparison:
 
 - The benchmark evaluates curated CancerPPD-derived IC50 events, not unrestricted de novo peptide discovery.
 - xDeep-AcPEP is not an identical-output model: it is included as a public CancerPPD-based baseline, while ACP-Profiler is designed for cell-line/time IC50 profiling.
-- The same peptide can appear under different contexts; event-level leakage was audited, but this is not a cold-peptide-only benchmark.
-- Missing-time records lack measured assay time and should be interpreted as auxiliary diagnostics.
+- The same peptide can appear under different contexts; this is not a cold-peptide-only benchmark.
 - Predicted all-context IC50 ranges are prioritization hypotheses, not experimentally verified fold changes.
 
 ## Ethical and Safety Notes

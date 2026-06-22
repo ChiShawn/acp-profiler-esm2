@@ -8,10 +8,10 @@ I built ACP-Profiler, a context-aware anticancer peptide IC50 regression workflo
 
 - Biological problem framing: ACP activity depends on cell line, assay, and exposure time.
 - Data curation: CancerPPD IC50 parsing, unit normalization, sequence filtering, and context cleaning.
-- Representation learning: peptide-domain ESM2/MLM adaptation and frozen embedding extraction.
+- Representation learning: ESM2-based peptide representation and frozen embedding extraction.
 - Leakage awareness: split design with peptide-cell-line-time event audit.
 - Model design: peptide representation, context-aware fusion, and regression head comparison.
-- Evaluation discipline: peptide-embedding baseline, non-fusion regression baseline, xDeep-AcPEP public comparison, and held-out IC50 diagnostics.
+- Evaluation discipline: peptide-embedding baseline, non-fusion regression baseline, xDeep-AcPEP public comparison, and held-out IC50 summary metrics.
 - Deployment thinking: command-line inference interface for context-ranked IC50 profiles.
 
 ## Important Design Decision
@@ -20,7 +20,7 @@ The public portfolio version does not expose the full internal feature schema. I
 
 ## Main Result to Mention
 
-On the standard-time held-out source-row test set:
+On the held-out IC50 test set:
 
 - ACP-Profiler context-aware model: RMSE 0.3201, PCC 0.8419
 - Raw ESM2 RidgeCV: RMSE 0.3981, PCC 0.7404
