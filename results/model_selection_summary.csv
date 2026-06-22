@@ -1,0 +1,5 @@
+candidate_model,validation_rmse,validation_pcc,selected
+context-aware fusion model,0.2898,0.9142,true
+latent-regression baseline,0.3053,0.9047,false
+gated-fusion baseline,0.3128,0.9034,false
+interaction-fusion baseline,0.3331,0.8861,false

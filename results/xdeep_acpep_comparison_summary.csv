@@ -1,0 +1,5 @@
+scope,method,n,rmse,mae,r2,pcc,output_resolution
+CancerPPD held-out IC50 subset,ACP-Profiler context-aware model,58,0.3135,0.2155,0.6440,0.8069,cell-line and time-resolved IC50
+CancerPPD held-out IC50 subset,ESM2 embedding baseline,58,0.3807,0.2793,0.4751,0.6901,peptide-level regression baseline
+CancerPPD held-out IC50 subset,Non-fusion regression baseline,58,0.3502,0.2370,0.5557,0.7551,context-aware regression baseline
+CancerPPD held-out IC50 subset,xDeep-AcPEP,58,0.6030,0.4665,-0.3173,0.4197,cancer-type/tissue-level activity model

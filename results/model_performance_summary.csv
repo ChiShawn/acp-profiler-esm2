@@ -1,0 +1,4 @@
+method,n,rmse,mae,r2,pcc
+ACP-Profiler context-aware model,155,0.3201,0.2107,0.6995,0.8419
+ESM2 embedding baseline,155,0.3981,0.2828,0.5352,0.7404
+Non-fusion regression baseline,155,0.3312,0.2137,0.6784,0.8289

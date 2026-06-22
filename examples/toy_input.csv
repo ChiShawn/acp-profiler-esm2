@@ -1,0 +1,3 @@
+sequence,cell_line,time_hours,assay
+FLFKLIPKAIKGLIKAFK,example_cell_line_A,24,cell_viability
+KWKSFLKTFKSLKKTVLHTLLKAISS,example_cell_line_B,48,cell_viability

@@ -1,0 +1,22 @@
+project: acp_profiler_portfolio
+task: anticancer_peptide_ic50_regression
+
+data:
+  public_activity_database: CancerPPD
+  prediction_unit: peptide_cell_line_time_event
+  release_note: "This portfolio version does not expose internal feature schema, processed datasets, or training recipe details."
+
+model:
+  peptide_representation: protein_language_model_embedding
+  auxiliary_features: peptide_descriptors_and_experimental_context
+  fusion_strategy: context_aware_neural_regression
+  target: transformed_ic50
+
+evaluation:
+  primary: held_out_ic50_regression
+  baselines:
+    - peptide_embedding_baseline
+    - non_fusion_regression_baseline
+  reported_outputs:
+    - summary_metrics_only
+    - no_row_level_third_party_data

@@ -1,0 +1,54 @@
+# Python/runtime
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Secrets/local config
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.pub
+
+# Large model/data artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npz
+*.npy
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+*.tar
+*.tar.gz
+*.zip
+
+# Third-party/raw/processed data
+data/
+raw/
+processed/
+external_tools/
+locked_model/
+runs/
+outputs/
+checkpoints/
+model_weights/
+
+# Documents not intended for GitHub
+*.doc
+*.docx
+*.pdf
+*.ppt
+*.pptx
+
+# Keep curated portfolio summaries and toy examples
+!results/*.csv
+!examples/*.csv
