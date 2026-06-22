@@ -7,7 +7,7 @@ peptide sequence + peptide descriptors + experimental context
 -> -log10(IC50_uM)
 ```
 
-This repository is intentionally a **portfolio version**, not the full internal research release. It shows the problem framing, modeling approach, evaluation design, and selected summary results while keeping internal feature engineering details, processed datasets, and model weights private.
+This repository is intentionally a **portfolio version**, not the full internal research release. It shows the problem framing, model interface, architecture, and selected summary results while keeping internal feature engineering details, processed datasets, training code, comparator evaluation code, and model weights private.
 
 ## Why This Project Matters
 
@@ -20,7 +20,7 @@ Most ACP prediction tools are sequence-only classifiers or cancer-type/tissue-le
 - Built context-aware neural regression models for quantitative IC50 prediction.
 - Evaluated against peptide-embedding and non-fusion regression baselines.
 - Compared against xDeep-AcPEP as a public CancerPPD-based ACP baseline.
-- Built a lightweight webapp prototype for peptide context profiling and candidate ranking.
+- Built a lightweight inference-style webapp prototype for peptide context profiling and candidate ranking.
 
 ## Model Summary
 
@@ -30,7 +30,7 @@ Most ACP prediction tools are sequence-only classifiers or cancer-type/tissue-le
 | Additional inputs | peptide descriptors and experimental context |
 | Objective | transformed IC50 regression |
 | Evaluation | held-out IC50 test events |
-| Portfolio release | summary metrics and code structure only |
+| Portfolio release | inference/demo interface and summary metrics only |
 
 ## Key Results
 
@@ -62,8 +62,7 @@ ACP_research/
   docs/                     # Markdown-only research documentation and architecture diagrams
   examples/                 # Toy inputs only, no third-party raw data
   results/                  # Small summary tables only
-  scripts/                  # Research pipeline code excerpts
-  src/acp_profiler/         # Reusable project code
+  scripts/                  # Inference/demo and public result utilities
 ```
 
 ## What Is Not Included
@@ -74,6 +73,7 @@ This repository intentionally does not include:
 - processed `.npz` feature matrices
 - model checkpoints or ESM2 weights
 - full row-level train/validation/test CSV files
+- training, pretraining, or comparator evaluation scripts
 - PDFs or Word documents
 
 These files are excluded because of size, third-party redistribution constraints, and GitHub portfolio hygiene. The repository is intended to show the scientific design and implementation, not to redistribute external datasets.
@@ -83,7 +83,7 @@ These files are excluded because of size, third-party redistribution constraints
 - [Architecture](docs/architecture.md)
 - [Data governance and release policy](docs/data_governance.md)
 - [Model card](docs/model_card.md)
-- [Reproduction notes](docs/reproduction.md)
+- [Usage and release policy](docs/usage.md)
 
 ## Status
 

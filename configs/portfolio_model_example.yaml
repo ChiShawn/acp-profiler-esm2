@@ -4,7 +4,7 @@ task: anticancer_peptide_ic50_regression
 data:
   public_activity_database: CancerPPD
   prediction_unit: peptide_cell_line_time_event
-  release_note: "This portfolio version does not expose internal feature schema, processed datasets, or training recipe details."
+  release_note: "This portfolio version does not expose internal feature schema, processed datasets, training code, or comparator evaluation code."
 
 model:
   peptide_representation: protein_language_model_embedding
