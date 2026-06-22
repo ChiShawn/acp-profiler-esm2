@@ -1,12 +1,12 @@
 # Scripts
 
-These scripts are public portfolio entry points. They are inference/demo and
-summary-report utilities only; training and comparator evaluation code are not
-part of the public release.
+These scripts are public portfolio entry points. They define a command-line
+inference contract and print summary results only; training and comparator
+evaluation code are not part of the public release.
 
 ## Main Entry Points
 
-- `context_aware_ic50_webapp.py`: lightweight portfolio web demo.
+- `acp_profiler_cli.py`: validates input CSVs and writes the public inference output schema.
 - `show_public_results.py`: prints the released summary result tables.
 
 ## Public Repo Note

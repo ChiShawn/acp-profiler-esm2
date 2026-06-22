@@ -9,16 +9,26 @@ performance without releasing the internal training pipeline.
 The public entry points are:
 
 ```bash
-python scripts/context_aware_ic50_webapp.py
+python scripts/acp_profiler_cli.py \
+  --input examples/toy_input.csv \
+  --output outputs/toy_predictions.csv
 ```
 
 ```bash
 python scripts/show_public_results.py
 ```
 
-The webapp is a lightweight demonstration of the intended model interaction:
-submit a peptide sequence and inspect context-aware IC50 profiling output. The
-public results script prints the released summary tables.
+The CLI validates the public input schema and writes the expected inference
+output schema. Prediction values are intentionally blank in this portfolio
+release because the trained model bundle and private feature pipeline are not
+published. The public results script prints the released summary tables.
+
+The expected input columns are:
+
+- `sequence`
+- `cell_line`
+- `time_hours`
+- `assay`
 
 ## Not Released
 
@@ -30,6 +40,7 @@ The public repository intentionally does not include:
 - processed feature matrices
 - internal feature schemas
 - pretraining or fine-tuning recipes
+- a hosted backend service
 
 If a model bundle is released later, it should be added as an inference artifact
 with a minimal loader and versioned model card. It should not require exposing

@@ -12,7 +12,7 @@ I built ACP-Profiler, a context-aware anticancer peptide IC50 regression workflo
 - Leakage awareness: split design with peptide-cell-line-time event audit.
 - Model design: peptide representation, context-aware fusion, and regression head comparison.
 - Evaluation discipline: peptide-embedding baseline, non-fusion regression baseline, xDeep-AcPEP public comparison, and held-out IC50 diagnostics.
-- Deployment thinking: web utility for context-ranked IC50 profiles and MLM-guided variant prioritization.
+- Deployment thinking: command-line inference interface for context-ranked IC50 profiles.
 
 ## Important Design Decision
 

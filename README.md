@@ -20,7 +20,7 @@ Most ACP prediction tools are sequence-only classifiers or cancer-type/tissue-le
 - Built context-aware neural regression models for quantitative IC50 prediction.
 - Evaluated against peptide-embedding and non-fusion regression baselines.
 - Compared against xDeep-AcPEP as a public CancerPPD-based ACP baseline.
-- Built a lightweight inference-style webapp prototype for peptide context profiling and candidate ranking.
+- Defined a command-line inference contract for peptide context profiling and candidate ranking.
 
 ## Model Summary
 
@@ -62,7 +62,7 @@ ACP_research/
   docs/                     # Markdown-only research documentation and architecture diagrams
   examples/                 # Toy inputs only, no third-party raw data
   results/                  # Small summary tables only
-  scripts/                  # Inference/demo and public result utilities
+  scripts/                  # CLI interface and public result utilities
 ```
 
 ## What Is Not Included
